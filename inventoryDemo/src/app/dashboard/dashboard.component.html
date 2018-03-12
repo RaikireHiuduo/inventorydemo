@@ -1,3 +1,14 @@
 <p>
   dashboard works!
 </p>
+
+<h3>Dashboard</h3>
+<div class="grid grid-pad">
+  <!--WIP: <a *ngFor="let module of BEEMS_Modules" class="col-1-4" routerLink="/detail/{{module.id}}"> -->
+  <a *ngFor="let module of BEEMS_Modules" class="col-1-4" routerLink="/detail/{{module.id}}">
+    <div class="module beems_module">
+      <img src="/assets/{{module.id}}.png">
+      <h4>{{module.name}}</h4>
+    </div>
+  </a>
+</div>
