@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BEEMS_Module } from '../beems_module'
-import { BEEMS_ModuleService } from '../beems-module.service'
+import { BEEMSModule } from '../beems-module'
+import { BEEMSModuleService } from '../beems-module.service'
 
 @Component({
   selector: 'app-dashboard',
@@ -10,16 +10,16 @@ import { BEEMS_ModuleService } from '../beems-module.service'
 })
 
 export class DashboardComponent implements OnInit {
-  BEEMS_Modules: BEEMS_Module[] = [];
+  beemsModules: BEEMSModule[] = [];
 
-  constructor(private beemsModuleService: BEEMS_ModuleService) {}
+  constructor(private BEEMSModuleService: BEEMSModuleService) {}
 
   ngOnInit() {
     this.getBEEMSModules();
   }
 
   getBEEMSModules(): void {
-    this.beemsModuleService.getBEEMSModules()
-      .subscribe(BEEMS_Modules => this.BEEMS_Modules = BEEMS_Modules);
+    this.BEEMSModuleService.getBEEMSModules()
+      .subscribe(beemsModules => this.beemsModules = beemsModules);
   }
 }

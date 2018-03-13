@@ -6,7 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { BEEMS_ModuleService } from './beems-module.service';
+
+import { BEEMSModuleService } from './beems-module.service';
+
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
 
@@ -23,7 +25,7 @@ import { MessagesComponent } from './messages/messages.component';
     AppRoutingModule
   ],
   providers: [
-    BEEMS_ModuleService, 
+    BEEMSModuleService, 
     MessageService
   ],
   bootstrap: [

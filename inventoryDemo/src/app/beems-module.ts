@@ -1,4 +1,4 @@
-export class BEEMS_Module {
+export class BEEMSModule {
     id: number;
     name: string;
 }

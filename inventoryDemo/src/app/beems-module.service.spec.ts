@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { BeemsModuleService } from './beems-module.service';
+import { BEEMSModuleService } from './beems-module.service';
 
-describe('BeemsModuleService', () => {
+describe('BEEMSModuleService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [BeemsModuleService]
+      providers: [BEEMSModuleService]
     });
   });
 
-  it('should be created', inject([BeemsModuleService], (service: BeemsModuleService) => {
+  it('should be created', inject([BEEMSModuleService], (service: BEEMSModuleService) => {
     expect(service).toBeTruthy();
   }));
 });

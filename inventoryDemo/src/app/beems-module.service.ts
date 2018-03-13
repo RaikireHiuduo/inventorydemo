@@ -2,23 +2,23 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
-import { BEEMS_Module } from './beems_module';
-import { BEEMS_MODULES } from './beems_module_list';
+import { BEEMSModule } from './beems-module';
+import { BEEMSMODULES } from './beems-module-list';
 import { MessageService } from './message.service';
 
 @Injectable()
-export class BEEMS_ModuleService {
+export class BEEMSModuleService {
   
-  getBEEMSModules(): Observable<BEEMS_Module[]> {
+  getBEEMSModules(): Observable<BEEMSModule[]> {
     // Todo: send the message _after_ fetching the heroes
-    this.messageService.add('BEEMS_ModuleService: fetched all modules');
-    return of(BEEMS_MODULES);
+    this.messageService.add('BEEMSModuleService: fetched all modules');
+    return of(BEEMSMODULES);
   }
 
-  getBEEMSModule(id: number): Observable<BEEMS_Module> {
+  getBEEMSModule(id: number): Observable<BEEMSModule> {
     // Todo: send the message _after_ fetching the hero
-    this.messageService.add(`BEEMS_ModuleService: fetched module id=${id}`);
-    return of(BEEMS_MODULES.find(BEEMS_Module => BEEMS_Module.id === id));
+    this.messageService.add(`BEEMSModuleService: fetched module id=${id}`);
+    return of(BEEMSMODULES.find(BEEMSModule => BEEMSModule.id === id));
   }
 
   constructor(private messageService: MessageService) { }
