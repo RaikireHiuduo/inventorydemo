@@ -5,7 +5,7 @@
 <div class="grid grid-pad">
   <a *ngFor="let module of beemsModules" class="col-1-4" routerLink="/{{module.id}}">
     <div class="module beemsModule">
-      <img src="/assets/{{module.id}}.png">
+      <i class="{{module.faicon}}"></i>
       <h4>{{module.name}}</h4>
     </div>
   </a>

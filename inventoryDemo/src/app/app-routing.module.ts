@@ -8,7 +8,7 @@ import { AssetCategoriesComponent } from './asset-categories/asset-categories.co
 import { AssetLocationComponent } from './asset-location/asset-location.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/1', pathMatch: 'full' },
   { path: '1', component: HomeComponent },
   { path: '2', component: DashboardComponent },
   { path: '101', component: AssetComponent },
