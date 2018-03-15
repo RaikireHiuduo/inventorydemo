@@ -1,5 +1,5 @@
 export class BEEMSModule {
-    id: number;
+    urn: string;
     faicon: string;
     name: string;
 }

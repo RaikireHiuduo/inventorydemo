@@ -3,7 +3,7 @@
   <button>A dead Username button. Please build me.</button>
 </div>
 <div class="grid grid-pad">
-  <a *ngFor="let module of beemsModules" class="col-1-4" routerLink="/{{module.id}}">
+  <a *ngFor="let module of beemsModules" class="col-1-4" routerLink="/{{module.urn}}">
     <div class="module beemsModule">
       <i class="{{module.faicon}}"></i>
       <h4>{{module.name}}</h4>

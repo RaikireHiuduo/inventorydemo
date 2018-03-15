@@ -15,10 +15,10 @@ export class BEEMSModuleService {
     return of(BEEMSMODULES);
   }
 
-  getBEEMSModule(id: number): Observable<BEEMSModule> {
+  getBEEMSModule(urn: string): Observable<BEEMSModule> {
     // Todo: send the message _after_ fetching the hero
-    this.messageService.add(`BEEMSModuleService: fetched module id=${id}`);
-    return of(BEEMSMODULES.find(BEEMSModule => BEEMSModule.id === id));
+    this.messageService.add(`BEEMSModuleService: fetched module id=${urn}`);
+    return of(BEEMSMODULES.find(BEEMSModule => BEEMSModule.urn === urn));
   }
 
   constructor(private messageService: MessageService) { }

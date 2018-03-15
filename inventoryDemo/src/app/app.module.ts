@@ -15,6 +15,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AssetComponent } from './asset/asset.component';
 import { AssetCategoriesComponent } from './asset-categories/asset-categories.component';
 import { AssetLocationComponent } from './asset-location/asset-location.component';
+import { UserManagementComponent } from './user-management/user-management.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AssetLocationComponent } from './asset-location/asset-location.componen
     MessagesComponent,
     AssetComponent,
     AssetCategoriesComponent,
-    AssetLocationComponent
+    AssetLocationComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,
