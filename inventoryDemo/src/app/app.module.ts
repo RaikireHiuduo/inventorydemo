@@ -16,6 +16,7 @@ import { AssetComponent } from './asset/asset.component';
 import { AssetCategoriesComponent } from './asset-categories/asset-categories.component';
 import { AssetLocationComponent } from './asset-location/asset-location.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UserManagementComponent } from './user-management/user-management.compo
     AssetComponent,
     AssetCategoriesComponent,
     AssetLocationComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    UserSettingsFormComponent
   ],
   imports: [
     BrowserModule,
