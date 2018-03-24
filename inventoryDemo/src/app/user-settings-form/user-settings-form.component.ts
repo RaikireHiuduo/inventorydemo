@@ -11,8 +11,7 @@ import { UserManagementService } from '../user-management.service';
 })
 export class UserSettingsFormComponent implements OnInit {
   //Code is based on: https://angular.io/guide/reactive-forms
-  @Input() userID: number;
-  user: UserSettingsModel;
+  @Input() user: UserSettingsModel;
 
   userSettingsForm: FormGroup;
 
