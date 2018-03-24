@@ -1,5 +1,43 @@
-<p>
-  user-settings-form works!
+<h2>Hero Detail</h2>
+<h3><i>A FormGroup with multiple FormControls</i></h3>
+<form [formGroup]="userSettingsForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label class="center-block">Email:
+      <input class="form-control" formControlName="email">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Full Name:
+      <input class="form-control" formControlName="fullname">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Position:
+      <input class="form-control" formControlName="position">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Expertise:
+      <input class="form-control" formControlName="expertise">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Department:
+      <input class="form-control" formControlName="department">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Group:
+      <input class="form-control" formControlName="group">
+    </label>
+  </div>
+  <div style="margin-bottom: 1em">
+    <button type="submit"
+            [disabled]="userSettingsForm.pristine" class="btn btn-success">Save</button> &nbsp;
+    <button type="button" (click)="revert()"
+            [disabled]="userSettingsForm.pristine" class="btn btn-danger">Revert</button>
+  </div>
+</form>
 
-  Check this out!: https://angular.io/guide/reactive-forms
-</p>
+<p>Form value: {{ userSettingsForm.value | json }}</p>
+<p>Form status: {{ userSettingsForm.status | json }}</p>

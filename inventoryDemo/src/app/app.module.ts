@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -10,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { BEEMSModuleService } from './beems-module.service';
 
+import { UserManagementService } from './user-management.service';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
 import { AssetComponent } from './asset/asset.component';
@@ -33,11 +35,13 @@ import { UserSettingsFormComponent } from './user-settings-form/user-settings-fo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     NgbModule.forRoot()
   ],
   providers: [
     BEEMSModuleService, 
-    MessageService
+    MessageService,
+    UserManagementService
   ],
   bootstrap: [
     AppComponent
