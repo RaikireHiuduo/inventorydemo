@@ -26,6 +26,7 @@ export class UserManagementService {
   
   /** GET users from the server */
   getUsers (): Observable<UserSettingsModel[]> {
+	this.log(`${this.usersUrl}`);
     return this.http.get<UserSettingsModel[]>(this.usersUrl)
       .pipe(
         tap(user => this.log(`fetched users`)),
@@ -36,8 +37,6 @@ export class UserManagementService {
   /** GET user by id. Will 404 if id not found */
   getUser(id: number): Observable<UserSettingsModel> {
     const url = `${this.usersUrl}/${id}`;
-    this.log(`${url}`);
-
     return this.http.get<UserSettingsModel>(url).pipe(
       tap(_ => this.log(`fetched user id=${id}`)),
       catchError(this.handleError<UserSettingsModel>(`getUser id=${id}`))
@@ -78,7 +77,7 @@ export class UserManagementService {
     };
   }
  
-  /** Log a HeroService message with the MessageService */
+  /** Log a UserManagementService message with the MessageService */
   private log(message: string) {
     this.messageService.add('UserManagementService: ' + message);
   }

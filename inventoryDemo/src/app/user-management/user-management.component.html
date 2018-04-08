@@ -1,1 +1,11 @@
-<app-user-settings-form [user] = "selectedUser"></app-user-settings-form>
+<h3>Users</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let user of users" class="col-1-4">
+    <div class="module hero">
+      <h4>{{user.username}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-user-settings-form></app-user-settings-form>
+<!-- <app-user-settings-form [user] = "selectedUser"></app-user-settings-form> -->

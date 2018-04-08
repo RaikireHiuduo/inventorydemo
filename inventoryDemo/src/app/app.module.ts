@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { UserSettingsDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -47,7 +47,7 @@ import { MessagesComponent } from './messages/messages.component';
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      UserSettingsDataService, { dataEncapsulation: false }
+      InMemoryDataService, { dataEncapsulation: false }
     )
   ],
   providers: [

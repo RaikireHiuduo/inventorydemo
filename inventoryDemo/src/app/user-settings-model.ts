@@ -1,13 +1,12 @@
 //TODO: Separate it by group
 export class UserSettingsModel {
-    id = 0;
-    username = '';
-    password = '';
-    email = '';
-    
-    fullname = '';
-    position = '';
-    expertise = '';
-    department = '';
-    group = '';
+    id: number;
+    username: string;
+    password: string;
+    email: string;
+    fullname: string;
+    position: string;
+    expertise: string;
+    department: string;
+    group: string;
 }

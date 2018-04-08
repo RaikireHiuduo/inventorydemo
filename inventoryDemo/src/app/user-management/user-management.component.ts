@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable }        from 'rxjs/Observable';
 
 import { UserSettingsModel } from '../user-settings-model';
 import { UserManagementService } from '../user-management.service';
@@ -11,7 +10,7 @@ import { UserManagementService } from '../user-management.service';
 })
 
 export class UserManagementComponent implements OnInit {
-  selectedUser: UserSettingsModel;
+  //selectedUser: UserSettingsModel;
   currentID = 11;
 
   users: UserSettingsModel[];
@@ -23,7 +22,7 @@ export class UserManagementComponent implements OnInit {
     this.getUser(this.currentID);
   }
 
-  getUser(id: number) {
+  getUser(id: number): void {
     this.userManagementService.getUsers().subscribe(users => this.users = users);
     //this.userManagementService.getUser(id).subscribe(user => this.selectedUser = user);
   }
